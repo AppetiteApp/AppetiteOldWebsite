@@ -1,0 +1,8 @@
+<div class="window">
+  <h1 class="page-title">Browse Various Dishes</h1>
+
+  <h2 class="subtitle">Most Recent Dishes</h2>
+  <%= will_paginate @advertisements %>
+  <%= render 'shared/advertisements', advertisements: @advertisements %>
+  <%= will_paginate @advertisements %>
+</div>

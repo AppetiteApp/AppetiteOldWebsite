@@ -1,0 +1,21 @@
+<nav class="topbar">
+  <div class="mobile-menu-button">
+    <div class="bar" id="bar1"></div>
+    <div class="bar" id="bar2"></div>
+    <div class="bar" id="bar3"></div>
+  </div>
+  <div class="mobile-logo">
+    <%= image_tag 'logo.png' %>
+  </div>
+  <ul class="clear">
+    <li id="logo-list-item">
+      <%= link_to root_path, id: 'top-bar-logo' do %>
+        <%= image_tag 'menu_icon.png' %>
+      <% end %>
+    </li>
+    <li><%= link_to 'Browse', advertisements_path %></li>
+    <li><%= link_to 'Submit a Dish!', new_advertisement_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Terms of Use', terms_path %></li>
+  </ul>
+</nav>

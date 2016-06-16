@@ -1,0 +1,33 @@
+<%= form_for advertisement do |f| %>
+  <%= f.label :dish %>
+  <% advertisement.errors[:dish].each do |msg| %>
+    <div class="form_error"><%= msg %></div>
+  <% end %>
+  <%= f.text_field :dish, placeholder: "The name of your dish" %>
+
+  <%= f.label :price %>
+  <% advertisement.errors[:price].each do |msg| %>
+    <div class="form_error"><%= msg %></div>
+  <% end %>
+  <%= f.text_field :price, placeholder: "0.00" %>
+
+  <%= f.label :phone %>
+  <% advertisement.errors[:phone].each do |msg| %>
+    <div class="form_error"><%= msg %></div>
+  <% end %>
+  <%= f.text_field :phone, placeholder: "A valid phone number" %>
+
+  <%= f.label :location %>
+  <% advertisement.errors[:location].each do |msg| %>
+    <div class="form_error"><%= msg %></div>
+  <% end %>
+  <%= f.text_field :location, placeholder: "Your locale or nearest cross street" %>
+
+  <%= f.label :description %>
+  <% advertisement.errors[:description].each do |msg| %>
+    <div class="form_error"><%= msg %></div>
+  <% end %>
+  <%= f.text_area :description, rows: 5, placeholder: "A short description. Don't forget to include a time it will be ready by!" %>
+
+  <%= f.submit %>
+<% end %>

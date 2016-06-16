@@ -1,0 +1,22 @@
+<table class="ads-table">
+  <thead>
+    <tr>
+      <th>Dish</th>
+      <th>Contact</th>
+      <th>Price</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% advertisements.each do |ad| %>
+    <tr>
+      <td><%= ad.dish %></td>
+      <td><%= ad.phone %></td>
+      <td>$<%= ad.price %></td>
+      <td><%= ad.location %></td>
+      <td><%= ad.description %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
